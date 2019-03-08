@@ -1,4 +1,4 @@
-# simple HSL buss-information display using MicroPython on esp32/8266
+# simple HSL bus-information display using MicroPython on esp32/8266
 Inspired the work of [@stetro](https://github.com/stetro). 
 
 <img src="imgs/output.jpg" width="500" />
