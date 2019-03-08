@@ -21,10 +21,7 @@ for n in range(0,10):
     utils.oled_ml_msg('trying to connect {} sec left..'.format(10-n), oled)
     utime.sleep(1)
 
-oled.fill(0)
-oled.text('connected', 0, 4)
-oled.text(sta_if.ifconfig()[0], 0, 10)
-oled.show()
+utils.oled_ml_msg('connected {}'.format(sta_if.ifconfig()[0]), oled)
 
 time_utils.init_time()
 
