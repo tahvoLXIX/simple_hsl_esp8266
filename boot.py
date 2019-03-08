@@ -19,7 +19,7 @@ sta_if.active(1)
 
 sta_if.connect(config.SSID, config.WPAKEY)
 for n in range(0,8):
-    oled.fill_rect(0,18,128,30,0)
+    oled.fill_rect(0,18,config.OLED_WIDTH,30,0)
     oled.text('{}'.format(8-n), 20,19)
     oled.show()
     utime.sleep(1)
@@ -39,7 +39,10 @@ def main():
     while True:
         t = time_utils.time()
         output = []
-        output.append('time {}'.format(time_utils.format_time(time_utils.localtime())))
+        if config.OLED_WIDTH_CHARS > 8:
+            output.append('time {}'.format(time_utils.format_time(time_utils.localtime())))
+        else:
+            output.append('{}'.format(time_utils.format_time(time_utils.localtime())))
         res = qry.transform_response(qry.doit(t))
         for item in res[:N_ITEMS]:
             buss_name = item['trip']['route']['shortName']

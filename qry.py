@@ -1,10 +1,10 @@
 import urequests
 import ujson
+from config import STOP_ID
 HSL_QUERY = '{"query":"{\\n  stop(id:\\"xxxDIGITRANSIT_STATION_IDxxx\\") {\\n name\\n stoptimesWithoutPatterns(numberOfDepartures: 10, startTime: xxxSTART_TIMExxx) {\\n serviceDay\\n realtimeDeparture\\n trip {\\n route {\\n shortName\\n }\\n }\\n headsign\\n }\\n  } \\n}","variables":null,"operationName":null}'
 
 STATION_K = 'xxxDIGITRANSIT_STATION_IDxxx'
 TIME_K = 'xxxSTART_TIMExxx'
-STOP_ID = 'HSL:1462106'
 
 
 HSL_API_URL = 'https://api.digitransit.fi:443/routing/v1/routers/hsl/index/graphql'
