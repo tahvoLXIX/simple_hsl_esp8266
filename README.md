@@ -1,6 +1,8 @@
 # simple HSL buss-information display using MicroPython on esp32/8266
 Inspired the work of [@stetro](https://github.com/stetro). 
 
+<img src="imgs/output.jpg" width="500" />
+
 ## requirements
  * SSD1306 based oled display
  * ESP32/ESP8266 microcontroller
