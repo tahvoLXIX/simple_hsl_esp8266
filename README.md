@@ -10,7 +10,7 @@ Inspired the work of [@stetro](https://github.com/stetro).
  * micropython firmware
 
 ## installation & configuration
-Clone the repository. Insert ssid / wpa-key information into `config.py`. Set correct I2C settings (pins) for `OLED_I2C`.
+Clone the repository. Insert ssid / wpa-key information into `config.py`. Set correct I2C settings (pins) for `OLED_I2C` in `config.py`.
 
 `STOP_ID` in config.py is currently pointing at a stop in Kamppi, Helsinki. Change it as appropriate.
 
